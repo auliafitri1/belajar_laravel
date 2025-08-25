@@ -1,18 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar mahasiswa</title>
-</head>
-<body>
-    <h1>Daftar mahasiswa</h1>
-    <ol>
-        <li><?php echo $mahasiswa1; ?></li>
-     
-    </ol>
-    <div>
- Copyright © <?php echo date("Y"); ?> Duniailkom
+ <html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Daftar Mahasiswa</title>
+ <link rel="stylesheet" href= "	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+ </head>
+ <body>
+ <div class="container text-center mt-4">
+ <h1>Daftar Mahasiswa</h1>
+ <ol class="list-group my-4">
+ <?php
+ foreach ($mahasiswa as $nama) {
+ echo "<li class=\"list-group-item\"> $nama </li>";
+ }
+ ?>
+ </ol>
+
+ <div>
+ <img class="rounded-circle img-thumbnail m-2" src="/img/1.png">
+ <img class="rounded-circle img-thumbnail m-2" src="/img/2.png">
+ <img class="rounded-circle img-thumbnail m-2" src="/img/3.png">
+ 
  </div>
-</body>
-</html>
+
+ <div>
+ Copyright © <?php echo date("Y"); ?> Duniailkom
+
+ </div>
+ </div>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/
+bootstrap.bundle.min.js"></script>
+ </body>
+ </html>

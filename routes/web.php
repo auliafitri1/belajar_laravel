@@ -133,8 +133,74 @@ Route::get('/mahasiswas', function () {
  return view('mahasiswa',
  [
  "mahasiswa1" => "Risa Lestari",
+ "mahasiswa2" => "Rudi Hermawan",
+ "mahasiswa3" => "Bambang Kusumo",
+ "mahasiswa4" => "Lisa Permata"
+ ]);
+ });
+
+Route::get('/mahasiswas', function () {
+ return view('universitas.mahasiswa')->with('mahasiswa01', 'Risa Lestari');
+ });
+
+Route::get('/mahasiswa', function () {
+
+ $arrMahasiswa = [
+ "mahasiswa01" => "Ris Lestari",
  "mahasiswa02" => "Rudi Hermawan",
  "mahasiswa03" => "Bambang Kusumo",
  "mahasiswa04" => "Lisa Permata"
- ]);
+ ];
+
+ return view('mahasiswa', $arrMahasiswa);
+ });
+
+Route::get('/mahasiswa', function () {
+ return view('mahasiswa')->with('mahasiswa01', 'Risa Lestari');
+ });
+
+Route::get('/mahasiswa', function () {
+ $arrMahasiswa = ["Risa Lestari","Rudi Hermawan","Bambang Kusumo",
+ "Lisa Permata"];
+
+ return view('mahasiswa')->with('mahasiswa', $arrMahasiswa);
+ });
+
+Route::get('/mahasiswass', function () {
+ return view('mahasiswa')
+ ->with('mahasiswa01', 'Risa Lestari')
+ ->with('mahasiswa02', 'Rudi Hermawan')
+ ->with('mahasiswa03', 'Bambang Kusumo');
+ });
+
+Route::get('/mahasiswa', function () {
+ return view('mahasiswa')->withmahasiswa01('Risa Lestari');
+ }); //with<nama_variabel>(nilai_variabel)//
+
+Route::get('/mahasiswa', function () {
+
+ $mahasiswa01 = "Risa Lestari";
+ $mahasiswa02 = "Rudi Hermawan";
+ $mahasiswa03 = "Bambang Kusumo";
+ $mahasiswa04 = "Lisa Permata";
+
+ return view('mahasiswa', compact("mahasiswa01", "mahasiswa02",
+ "mahasiswa03", "mahasiswa04"));
+ });
+
+Route::get('/mahasiswa', function () {
+
+ $mahasiswa01 = "Risa Lestari";
+ $mahasiswa02 = "Rudi Hermawan";
+ $mahasiswa03 = "Bambang Kusumo";
+ $mahasiswa04 = "Lisa Permata";
+ return view('mahasiswa')->with(compact("mahasiswa01",
+ "mahasiswa02", "mahasiswa03", "mahasiswa04"));
+ });
+
+Route::get('/mahasiswa', function () {
+ $arrMahasiswa = ["aul Lestari","Rudi Hermawan","Bambang Kusumo",
+ "Lisa Permata"];
+
+ return view('mahasiswa',['mahasiswa' => $arrMahasiswa]);
  });
