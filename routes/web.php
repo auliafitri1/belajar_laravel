@@ -121,6 +121,20 @@ Route::get('/hello', function () {
     return $hello;
 });
 
-Route::get('/mahasiswa', function (){
-    return view('mahasiswa' , );
+Route::get('/mahasiswa',  function (){
+    return view('mahasiswa'  );
 });
+
+Route::get('/mahasiswas', function () {
+ return view('mahasiswa',["mahasiswa1" => "Risa Lestari"]);
+ });
+
+Route::get('/mahasiswas', function () {
+ return view('mahasiswa',
+ [
+ "mahasiswa1" => "Risa Lestari",
+ "mahasiswa02" => "Rudi Hermawan",
+ "mahasiswa03" => "Bambang Kusumo",
+ "mahasiswa04" => "Lisa Permata"
+ ]);
+ });

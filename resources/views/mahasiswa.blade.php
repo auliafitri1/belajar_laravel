@@ -8,10 +8,8 @@
 <body>
     <h1>Daftar mahasiswa</h1>
     <ol>
-        <li>rudi</li>
-        <li>aul</li>
-        <li>ven</li>
-        <li>advn</li>
+        <li><?php echo $mahasiswa1; ?></li>
+     
     </ol>
     <div>
  Copyright © <?php echo date("Y"); ?> Duniailkom
