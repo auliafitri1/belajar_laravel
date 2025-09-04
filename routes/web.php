@@ -11,8 +11,8 @@ use Illuminate\Support\Facades\Route;
  | contains the "web" middleware group. Now create something great!
  |
  */
-// Route::get('/helo', function () {
-//     return "hello word";
+// Route::get('/bundling', function () {
+//     return view('bundling');
 // });
 
 // Route::get('/belajar', function () {
@@ -226,19 +226,30 @@ use Illuminate\Support\Facades\Route;
 //  });
 
 
-Route::get('mahasiswa-new', function () {
-    $mahasiswa = ["Risa Lestari", "Rudi Hermawan", "Bambang Kusumo", "Lisa Permata"];
-    return view('mahasiswa-new', compact('mahasiswa'));
-});
+// Route::get('/mahasiswa', function () {
+//     $arrMahasiswa = ["Risa Lestari","Rudi Hermawan","Bambang Kusumo","Lisa Permata"];
+//     return view('mahasiswa')->with('mahasiswa', $arrMahasiswa);
+// });
 
-Route::get('dosen-new', function () {
-    $dosen = ["Maya Fitrianti, M.M.", "Prof. Silvia Nst, M.Farm.", "Dr. Umar Agustinus", "Dr. Syahrial, M.Kom."];
-    return view('dosen-new', compact('dosen'));
-});
+// Route::get('/dosen', function () {
+//     $arrDosen = ["Maya Fitrianti, M.M.", "Prof. Silvia Nst, M.Farm.","Dr. Umar Agustinus", "Dr. Syahrial, M.Kom."];
+//     return view('dosen')->with('dosen', $arrDosen);
+// });
+
+// Route::get('universitas/fmipa/matematika/gallery', function () {
+//  return view('gallery');
+// })->name('gambar');
+
+// Route::get('admin', function () {
+//  return view('admin');
+//  });
+
+//  Route::get('informasi/{fakultas}/{jurusan}', function ($fakultas, $jurusan) {
+//  $data = [$fakultas, $jurusan];
+//  return view('informasi')->with('data', $data);
+//  })->name('info');
 
 
-Route::get('gallery-new', function () {
-    return view('gallery-new');
-});
+ Route::get('/', [App\Http\Controllers\PageController::class,'index']);
+ Route::get('/mahasiswa',[App\Http\Controllers\PageController::class,'tampil']);
 
-17
