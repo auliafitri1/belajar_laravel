@@ -1,6 +1,6 @@
 <?php
-use Illuminate\Support\Facades\Route;
-
+// use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\PageController;
  /*
  |--------------------------------------------------------------------------
  | Web Routes
@@ -250,6 +250,46 @@ use Illuminate\Support\Facades\Route;
 //  })->name('info');
 
 
- Route::get('/', [App\Http\Controllers\PageController::class,'index']);
- Route::get('/mahasiswa',[App\Http\Controllers\PageController::class,'tampil']);
 
+// use App\Http\Controllers\PageController;
+
+// // route lain di atas
+
+// Route::get('/', [PageController::class, 'index']);
+// Route::get('/mahasiswa', [PageController::class, 'tampil']);
+
+
+
+
+
+//  Route::get('/', [PageController::class,'index']);
+//  Route::get('/mahasiswai',[PageController::class,'tampil']);
+
+
+// use Illuminate\Support\Facades\Route;
+//  use App\Http\Controllers\Admin\PageController;
+
+//  Route::get('/', [PageController::class,'index']);
+//  Route::get('/mahasiswai',[PageController::class,'tampil']);
+
+// Route::get('/coba-facade',[PageController::class,'cobaFacade']);
+
+
+// use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\Admin\PageController; 
+// Route::get('/coba-class',[PageController::class,'cobaClass']);
+
+// Route::get('/produk', App\Http\Controllers\ProdukController::class);
+
+// Route::get('/item', App\Http\Controllers\ItemController::class);
+
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CollectionController;
+
+Route::get('/satu', [CollectionController::class, 'collectionSatu']);
+Route::get('/dua', [CollectionController::class, 'collectionDua']);
+Route::get('/tiga', [CollectionController::class, 'collectionTiga']);
+Route::get('/empat', [CollectionController::class, 'collectionEmpat']);
+Route::get('/lima', [CollectionController::class, 'collectionLima']);
+Route::get('/enam', [CollectionController::class, 'collectionEnam']);
